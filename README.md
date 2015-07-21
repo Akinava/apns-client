@@ -1,13 +1,23 @@
-# apns-client
-you need add key(no_encrypt).pem to sert.pem
-for example key(no_encrypt).pem >> sert.pem
+### apns-client
 
-# clone repo
+you need add key(no_encrypt).pem to sert.pem
+
+for example
+
+```sh
+cat key(no_encrypt).pem >> sert.pem
+```
+
+### clone repo
+
+```sh
 git clone git@github.com:Akinava/apns-client.git
 cd ./apns-client
+```
 
-# run python
+### run python
 
+```python
 import sys
 sys.path.appnd('/dir/to/repo/apns-client')
 
@@ -48,3 +58,4 @@ p.add_frame(token=device_token_5s, text="hello 5", sound="103.m4a")
 # unlock send
 s.lock_send = False
 s.send()
+```
